@@ -26,6 +26,10 @@ def read_avl_data(client_socket, imei) -> int:
         avl_gps_format, client_socket.recv(avl_gps_size)
     )
 
+    # account for device GPS precision as documented
+    longitude = longitude / 10000000
+    latitude = latitude / 10000000
+
     timestamp_datetime = datetime.datetime.fromtimestamp(
         timestamp / 1000, datetime.timezone.utc
     )

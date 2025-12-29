@@ -5,6 +5,8 @@ This project is a basic implementation of a GPS server that receives AVL data fr
 1. **database.py** - Handles saving the decoded data into a SQLite database.
 2. **gps_server.py** - Listens for incoming connections from Teltonika devices, receives AVL data, decodes it, and saves it using `database.py`.
 
+For more details on the protocol visit the documentation at [https://wiki.teltonika-gps.com/view/Teltonika_AVL_Protocols#Codec_8](https://wiki.teltonika-gps.com/view/Teltonika_AVL_Protocols#Codec_8)
+
 ## Requirements
 
 - Python 3.x
